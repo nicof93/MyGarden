@@ -15,5 +15,6 @@ public final class DBContract {
         public static final String COLUMN_NAME_PLANTA_ID = "id";
         public static final String COLUMN_NAME_NOMBRE = "nombre";
         public static final String COLUMN_NAME_DESCRPCION = "descripcion";
+        public static final String COLUMN_NAME_IMAGEN = "imagen";
     }
 }

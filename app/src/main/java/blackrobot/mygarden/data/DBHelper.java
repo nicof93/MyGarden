@@ -18,11 +18,20 @@ public class DBHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
+        final String SQL_CREATE_PLANTA = "CREATE TABLE " + DBContract.PlantaEntry.TABLE_NAME + "( " +
+                DBContract.PlantaEntry.COLUMN_NAME_PLANTA_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+                DBContract.PlantaEntry.COLUMN_NAME_NOMBRE + " TEXT NOT NULL," +
+                DBContract.PlantaEntry.COLUMN_NAME_DESCRPCION + " TEXT NOT NULL," +
+                DBContract.PlantaEntry.COLUMN_NAME_IMAGEN + " TEXT NOT NULL )";
+
+        db.execSQL(SQL_CREATE_PLANTA);
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS " + DBContract.PlantaEntry.TABLE_NAME);
 
+        onCreate(db);
     }
 }

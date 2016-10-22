@@ -9,7 +9,7 @@
     </style>
 
     <!-- Custom Application theme. -->
-    <style name="BestGarden" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="BestGarden" parent="android:Theme.DeviceDefault">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/green_fluor</item>
